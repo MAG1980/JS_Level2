@@ -124,8 +124,11 @@ body {
 
 .footer {
   background-color: #111;
-  min-height: 200px;
   flex: 0 0 auto;
+  font-size: 60px;
+  color: blue;
+  text-align: center;
+  padding: 55px 0;
 }
 
 /*# sourceMappingURL=style.css.map */
