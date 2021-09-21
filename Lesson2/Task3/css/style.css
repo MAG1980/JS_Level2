@@ -1,0 +1,104 @@
+body {
+  font-size: 20px;
+}
+
+.header-title {
+  text-align: center;
+  color: red;
+}
+
+.product {
+  display: grid;
+  background-color: blue;
+  height: 100vh;
+  grid-template-areas: "top top top" "size size size-choice" "stuff stuff stuff-choice" "flavor flavor flavor-choice" "button button total" "bottom bottom bottom";
+  grid-template-rows: 0.5fr 1fr 1fr 1fr 120px 0.5fr;
+  grid-template-columns: repeat(3, 1fr);
+}
+.product-size {
+  grid-area: size;
+  background-color: #a86343;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.product-size-choice {
+  grid-area: size-choice;
+  background-color: #a86343;
+}
+.product-stuff {
+  grid-area: stuff;
+  background-color: #a86343;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.product-stuff-choice {
+  grid-area: stuff-choice;
+  background-color: #a86343;
+}
+.product-flavor {
+  grid-area: flavor;
+  background-color: #a86343;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.product-flavor-choice {
+  grid-area: flavor-choice;
+  background-color: #a86343;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.product-flavor-Condiment {
+  background-color: yellow;
+}
+.product-flavor-Mayonnaise {
+  background-color: gray;
+}
+.product-button {
+  grid-area: button;
+  background-color: green;
+  color: red;
+}
+.product-top {
+  grid-area: top;
+}
+.product-bottom {
+  grid-area: bottom;
+}
+.product-line {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+.product-total {
+  grid-area: total;
+  background-color: red;
+}
+.product-total, .product-size-choice, .product-stuff-choice {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.product-size-line,
+.product-stuff-line,
+.product-flavor-line {
+  background-color: #ffb999;
+}
+
+.info {
+  display: flex;
+  justify-content: space-around;
+  background-color: #ffb999;
+  padding: 20px 0;
+  margin: 0 10px;
+}
+.info-inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*# sourceMappingURL=style.css.map */
