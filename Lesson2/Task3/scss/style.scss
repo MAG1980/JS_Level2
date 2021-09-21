@@ -1,0 +1,105 @@
+body{
+  font-size: 20px;
+}
+.header-title{
+  text-align: center;
+  color: red;
+}
+.product {
+  display: grid;
+  background-color: blue;
+  height: 100vh;
+  grid-template-areas:
+    "top top top"
+    "size size size-choice"
+    "stuff stuff stuff-choice"
+    "flavor flavor flavor-choice"
+    "button button total"
+    "bottom bottom bottom";
+  grid-template-rows: .5fr 1fr 1fr 1fr 120px .5fr;
+  grid-template-columns: repeat(3, 1fr);
+  &-size {
+    grid-area: size;
+    background-color: #a86343;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    &-choice{
+      grid-area: size-choice;
+      background-color: #a86343;
+    }
+  }
+  &-stuff {
+    grid-area: stuff;
+    background-color: #a86343;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    &-choice{
+      grid-area: stuff-choice;
+      background-color: #a86343;
+    }
+  }
+  &-flavor {
+    grid-area: flavor;
+    background-color: #a86343;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    &-choice{
+      grid-area: flavor-choice;
+      background-color:#a86343;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+    }
+    &-Condiment{
+      background-color: yellow;
+    }
+    &-Mayonnaise{
+      background-color: gray;
+    }
+  }
+  &-button {
+    grid-area: button;
+    background-color: green;
+    color: red;
+  }
+  &-top {
+    grid-area: top;
+  }
+  &-bottom {
+    grid-area: bottom;
+  }
+  &-line {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+  }
+  &-total{
+    grid-area: total;
+    background-color: red;
+  }
+  &-total, &-size-choice, &-stuff-choice{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+.product-size-line,
+.product-stuff-line,
+.product-flavor-line {
+  background-color: #ffb999;
+}
+.info{
+  display: flex;
+  justify-content: space-around;
+  background-color: #ffb999;
+  padding: 20px 0;
+  margin: 0 10px;
+  &-inner{
+    display: flex;
+    justify-content: space-between;
+  }
+}
