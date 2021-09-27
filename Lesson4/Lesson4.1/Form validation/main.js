@@ -43,7 +43,6 @@ $email.addEventListener('input', (event) => {
 })
 document.querySelector('form').addEventListener('submit',(event)=>{
     console.log($name.value);
-    document.forms['form'].submit();
     if (!$name.value.match(nameRegExp)){
         event.preventDefault();
         $nameWarning.classList.add('warning');
@@ -56,4 +55,5 @@ document.querySelector('form').addEventListener('submit',(event)=>{
         event.preventDefault();
         $emailWarning.classList.add('warning');
     }
+    document.forms['form'].submit();
 })
