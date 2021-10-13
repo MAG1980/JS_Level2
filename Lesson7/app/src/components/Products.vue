@@ -3,7 +3,7 @@
     <ProductsNavbar></ProductsNavbar>
     <div class="products__box">
       <ProductsFilter></ProductsFilter>
-      <ProductsContent></ProductsContent>
+      <ProductsContent :reload="reload"></ProductsContent>
       <ProductsPagination></ProductsPagination>
     </div>
   </section>
@@ -14,7 +14,9 @@ import ProductsNavbar from "@/components/ProductsNavbar";
 import ProductsFilter from "@/components/ProductsFilter";
 import ProductsContent from "@/components/ProductsContent";
 import ProductsPagination from "@/components/ProductsPagination";
+
 export default {
+  props: ["reload"],
   name: "Products",
   components: {
     ProductsNavbar,

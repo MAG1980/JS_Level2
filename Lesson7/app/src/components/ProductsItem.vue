@@ -2,10 +2,10 @@
   <div class="products__item">
     <a class="products__product" href="single_page.html">
       <img src="@/assets/img/products/product_14.jpg" alt="товар" class="products__image">
-      <p class="products__name">Mango People jacket№2</p>
+      <p class="products__name">{{ product.product_name }}</p>
     </a>
     <div class="products__item-rating">
-      <p class="products__price"><span>$</span>20.00</p>
+      <p class="products__price"><span>$</span>{{ product.price }}</p>
       <p class="products__item-stars">
         <i class="fas fa-star products__item-stars_golden" aria-hidden="true"></i>
         <i class="fas fa-star products__item-stars_golden" aria-hidden="true"></i>
@@ -36,6 +36,7 @@
 
 <script>
 export default {
+  props: ['img', 'product'],
   name: "ProductsItem"
 }
 </script>

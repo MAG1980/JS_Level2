@@ -1,313 +1,77 @@
 <template>
   <div class="products__content">
-    <ProductsItem></ProductsItem>
-    <!--                 <div class="products__item">
-        <a class="products__product" href="single_page.html">
-            <img src="img/products/product_13.jpg" alt="товар" class="products__image">
-            <p class="products__name">Mango People jacket№1</p>
-        </a>
-        <div class="products__item-rating">
-            <p class="products__price"><span>$</span>10.00</p>
-            <p class="products__item-stars">
-                <i class="fas fa-star products__item-stars_golden" aria-hidden="true"></i>
-                <i class="fas fa-star products__item-stars_golden" aria-hidden="true"></i>
-                <i class="fas fa-star products__item-stars_golden" aria-hidden="true"></i>
-                <i class="fas fa-star products__item-stars_golden" aria-hidden="true"></i>
-                <i class="fas fa-star products__item-stars_golden" aria-hidden="true"></i>
-            </p>
-        </div>
-        <div class="products__add">
-            <div class="products__add_wrapper">
-                <a class="products__add_link" href="cart_page.html">
-                    <img src="img/products/add_to_cart.png" alt="корзина" class="products__add_icon">
-                    <p class="products__add_text">Add to Cart</p>
-                </a>
-                <div class="products__add_links">
-                    <a class="products__add_small" href="cart_page.html">
-                        <img src="img/icons/arrow_u_d.png" alt="обновить" class="products__add_icon">
-                    </a>
-                    <a class="products__add_small" href="cart_page.html">
-                        <img src="img/icons/heart.png" alt="добавить в избранное"
-                            class="products__add_icon">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="products__item">
-        <a class="products__product" href="single_page.html">
-            <img src="img/products/product_14.jpg" alt="товар" class="products__image">
-            <p class="products__name">Mango People jacket№2</p>
-        </a>
-        <div class="products__item-rating">
-            <p class="products__price"><span>$</span>20.00</p>
-            <p class="products__item-stars">
-                <i class="fas fa-star products__item-stars_golden" aria-hidden="true"></i>
-                <i class="fas fa-star products__item-stars_golden" aria-hidden="true"></i>
-                <i class="fas fa-star" aria-hidden="true"></i>
-                <i class="fas fa-star" aria-hidden="true"></i>
-                <i class="fas fa-star" aria-hidden="true"></i>
-            </p>
-        </div>
-        <div class="products__add">
-            <div class="products__add_wrapper">
-                <a class="products__add_link" href="cart_page.html">
-                    <img src="img/products/add_to_cart.png" alt="корзина" class="products__add_icon">
-                    <p class="products__add_text">Add to Cart</p>
-                </a>
-                <div class="products__add_links">
-                    <a class="products__add_small" href="cart_page.html">
-                        <img src="img/icons/arrow_u_d.png" alt="обновить" class="products__add_icon">
-                    </a>
-                    <a class="products__add_small" href="cart_page.html">
-                        <img src="img/icons/heart.png" alt="добавить в избранное"
-                            class="products__add_icon">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="products__item">
-        <a class="products__product" href="single_page.html">
-            <img src="img/products/product_15.jpg" alt="товар" class="products__image">
-            <p class="products__name">Mango People jacket№3</p>
-        </a>
-        <div class="products__item-rating">
-            <p class="products__price"><span>$</span>30.00</p>
-            <p class="products__item-stars">
-                <i class="fas fa-star products__item-stars_golden" aria-hidden="true"></i>
-                <i class="fas fa-star products__item-stars_golden" aria-hidden="true"></i>
-                <i class="fas fa-star products__item-stars_golden" aria-hidden="true"></i>
-                <i class="fas fa-star products__item-stars_golden" aria-hidden="true"></i>
-                <i class="fas fa-star" aria-hidden="true"></i>
-            </p>
-        </div>
-        <div class="products__add">
-            <div class="products__add_wrapper">
-                <a class="products__add_link" href="cart_page.html">
-                    <img src="img/products/add_to_cart.png" alt="корзина" class="products__add_icon">
-                    <p class="products__add_text">Add to Cart</p>
-                </a>
-                <div class="products__add_links">
-                    <a class="products__add_small" href="cart_page.html">
-                        <img src="img/icons/arrow_u_d.png" alt="обновить" class="products__add_icon">
-                    </a>
-                    <a class="products__add_small" href="cart_page.html">
-                        <img src="img/icons/heart.png" alt="добавить в избранное"
-                            class="products__add_icon">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="products__item">
-        <a class="products__product" href="single_page.html">
-            <img src="img/products/product_16.jpg" alt="товар" class="products__image">
-            <p class="products__name">Mango People T-shirt</p>
-        </a>
-        <div class="products__item-rating">
-            <p class="products__price"><span>$</span>40.00</p>
-            <p class="products__item-stars">
-                <i class="fas fa-star products__item-stars_golden" aria-hidden="true"></i>
-                <i class="fas fa-star products__item-stars_golden" aria-hidden="true"></i>
-                <i class="fas fa-star products__item-stars_golden" aria-hidden="true"></i>
-                <i class="fas fa-star products__item-stars_golden" aria-hidden="true"></i>
-                <i class="fas fa-star" aria-hidden="true"></i>
-            </p>
-        </div>
-        <div class="products__add">
-            <div class="products__add_wrapper">
-                <a class="products__add_link" href="cart_page.html">
-                    <img src="img/products/add_to_cart.png" alt="корзина" class="products__add_icon">
-                    <p class="products__add_text">Add to Cart</p>
-                </a>
-                <div class="products__add_links">
-                    <a class="products__add_small" href="cart_page.html">
-                        <img src="img/icons/arrow_u_d.png" alt="обновить" class="products__add_icon">
-                    </a>
-                    <a class="products__add_small" href="cart_page.html">
-                        <img src="img/icons/heart.png" alt="добавить в избранное"
-                            class="products__add_icon">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="products__item">
-        <a class="products__product" href="single_page.html">
-            <img src="img/products/product_17.jpg" alt="товар" class="products__image">
-            <p class="products__name">Mango People sweater</p>
-        </a>
-        <div class="products__item-rating">
-            <p class="products__price"><span>$</span>50.00</p>
-            <p class="products__item-stars">
-                <i class="fas fa-star products__item-stars_golden" aria-hidden="true"></i>
-                <i class="fas fa-star" aria-hidden="true"></i>
-                <i class="fas fa-star" aria-hidden="true"></i>
-                <i class="fas fa-star" aria-hidden="true"></i>
-                <i class="fas fa-star" aria-hidden="true"></i>
-            </p>
-        </div>
-        <div class="products__add">
-            <div class="products__add_wrapper">
-                <a class="products__add_link" href="cart_page.html">
-                    <img src="img/products/add_to_cart.png" alt="корзина" class="products__add_icon">
-                    <p class="products__add_text">Add to Cart</p>
-                </a>
-                <div class="products__add_links">
-                    <a class="products__add_small" href="cart_page.html">
-                        <img src="img/icons/arrow_u_d.png" alt="обновить" class="products__add_icon">
-                    </a>
-                    <a class="products__add_small" href="cart_page.html">
-                        <img src="img/icons/heart.png" alt="добавить в избранное"
-                            class="products__add_icon">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="products__item">
-        <a class="products__product" href="single_page.html">
-            <img src="img/products/product_18.jpg" alt="товар" class="products__image">
-            <p class="products__name">Mango People jacket</p>
-        </a>
-        <div class="products__item-rating">
-            <p class="products__price"><span>$</span>60.00</p>
-            <p class="products__item-stars">
-                <i class="fas fa-star" aria-hidden="true"></i>
-                <i class="fas fa-star" aria-hidden="true"></i>
-                <i class="fas fa-star" aria-hidden="true"></i>
-                <i class="fas fa-star" aria-hidden="true"></i>
-                <i class="fas fa-star" aria-hidden="true"></i>
-            </p>
-        </div>
-        <div class="products__add">
-            <div class="products__add_wrapper">
-                <a class="products__add_link" href="cart_page.html">
-                    <img src="img/products/add_to_cart.png" alt="корзина" class="products__add_icon">
-                    <p class="products__add_text">Add to Cart</p>
-                </a>
-                <div class="products__add_links">
-                    <a class="products__add_small" href="cart_page.html">
-                        <img src="img/icons/arrow_u_d.png" alt="обновить" class="products__add_icon">
-                    </a>
-                    <a class="products__add_small" href="cart_page.html">
-                        <img src="img/icons/heart.png" alt="добавить в избранное"
-                            class="products__add_icon">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="products__item">
-        <a class="products__product" href="single_page.html">
-            <img src="img/products/product_19.jpg" alt="товар" class="products__image">
-            <p class="products__name">Mango People Blazer</p>
-        </a>
-        <div class="products__item-rating">
-            <p class="products__price"><span>$</span>70.00</p>
-            <p class="products__item-stars">
-                <i class="fas fa-star" aria-hidden="true"></i>
-                <i class="fas fa-star" aria-hidden="true"></i>
-                <i class="fas fa-star" aria-hidden="true"></i>
-                <i class="fas fa-star" aria-hidden="true"></i>
-                <i class="fas fa-star" aria-hidden="true"></i>
-            </p>
-        </div>
-        <div class="products__add">
-            <div class="products__add_wrapper">
-                <a class="products__add_link" href="cart_page.html">
-                    <img src="img/products/add_to_cart.png" alt="корзина" class="products__add_icon">
-                    <p class="products__add_text">Add to Cart</p>
-                </a>
-                <div class="products__add_links">
-                    <a class="products__add_small" href="cart_page.html">
-                        <img src="img/icons/arrow_u_d.png" alt="обновить" class="products__add_icon">
-                    </a>
-                    <a class="products__add_small" href="cart_page.html">
-                        <img src="img/icons/heart.png" alt="добавить в избранное"
-                            class="products__add_icon">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="products__item">
-        <a class="products__product" href="single_page.html">
-            <img src="img/products/product_20.jpg" alt="товар" class="products__image">
-            <p class="products__name">Mango People jacket</p>
-        </a>
-        <div class="products__item-rating">
-            <p class="products__price"><span>$</span>85.00</p>
-            <p class="products__item-stars">
-                <i class="fas fa-star" aria-hidden="true"></i>
-                <i class="fas fa-star" aria-hidden="true"></i>
-                <i class="fas fa-star" aria-hidden="true"></i>
-                <i class="fas fa-star" aria-hidden="true"></i>
-                <i class="fas fa-star" aria-hidden="true"></i>
-            </p>
-        </div>
-        <div class="products__add">
-            <div class="products__add_wrapper">
-                <a class="products__add_link" href="cart_page.html">
-                    <img src="img/products/add_to_cart.png" alt="корзина" class="products__add_icon">
-                    <p class="products__add_text">Add to Cart</p>
-                </a>
-                <div class="products__add_links">
-                    <a class="products__add_small" href="cart_page.html">
-                        <img src="img/icons/arrow_u_d.png" alt="обновить" class="products__add_icon">
-                    </a>
-                    <a class="products__add_small" href="cart_page.html">
-                        <img src="img/icons/heart.png" alt="добавить в избранное"
-                            class="products__add_icon">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="products__item">
-        <a class="products__product" href="single_page.html">
-            <img src="img/products/product_21.jpg" alt="товар" class="products__image">
-            <p class="products__name">Mango People T-shirt№2</p>
-        </a>
-        <div class="products__item-rating">
-            <p class="products__price"><span>$</span>100.00</p>
-            <p class="products__item-stars">
-                <i class="fas fa-star" aria-hidden="true"></i>
-                <i class="fas fa-star" aria-hidden="true"></i>
-                <i class="fas fa-star" aria-hidden="true"></i>
-                <i class="fas fa-star" aria-hidden="true"></i>
-                <i class="fas fa-star" aria-hidden="true"></i>
-            </p>
-        </div>
-        <div class="products__add">
-            <div class="products__add_wrapper">
-                <a class="products__add_link" href="cart_page.html">
-                    <img src="img/products/add_to_cart.png" alt="корзина" class="products__add_icon">
-                    <p class="products__add_text">Add to Cart</p>
-                </a>
-                <div class="products__add_links">
-                    <a class="products__add_small" href="cart_page.html">
-                        <img src="img/icons/arrow_u_d.png" alt="обновить" class="products__add_icon">
-                    </a>
-                    <a class="products__add_small" href="cart_page.html">
-                        <img src="img/icons/heart.png" alt="добавить в избранное"
-                            class="products__add_icon">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div> -->
+    <ProductsItem
+        v-for="item in products"
+        :key="item.id_product"
+        :img="img"
+        :product="item">
+    </ProductsItem>
+    <ul>
+      <li v-for="product in products" :key="product.id_product">{{ product.product_name }}</li>
+    </ul>
+    <p>{{ marker }}</p>
   </div>
 </template>
 
 <script>
 import ProductsItem from "@/components/ProductsItem";
+
 export default {
+  props: ["reload"],
   name: "ProductsContent",
   components: {
     ProductsItem,
+  },
+  data() {
+    return {
+      API: 'https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses',
+      userSearch: '',
+      showCart: false,
+      catalogUrl: '/catalogData.json',
+      cartUrl: '/getBasket.json',
+      cartItems: [],
+      filtered: [],
+      imgCart: 'https://placehold.it/50x100',
+      products: [],
+      imgProduct: 'https://placehold.it/200x150',
+      marker: 0,
+    }
+  },
+  watch: {
+    reload() {
+      this.marker += 1;
+      // this.getJson(`${this.API + this.cartUrl}`)
+      //     .then(data => {
+      //       for (let item of data.contents) {
+      //         this.$data.cartItems.push(item);
+      //       }
+      //     });
+      this.getJson(`${this.API + this.catalogUrl}`)
+          .then(data => {
+            for (let item of data) {
+              console.log(item);
+              this.$data.products.push(item);
+              this.$data.filtered.push(item);
+            }
+          });
+      // this.getJson(`getProducts.json`)
+      //     .then(data => {
+      //       for (let item of data) {
+      //         this.$data.products.push(item);
+      //         this.$data.filtered.push(item);
+      //       }
+      //     };
+    }
+  },
+  methods: {
+    getJson(url) {
+      return fetch(url)
+          .then(result => result.json())
+          .catch(error => console.log(error))
+    }
+    ,
   }
+  ,
 }
 </script>
 

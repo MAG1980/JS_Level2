@@ -61,7 +61,16 @@ export default {
   name: "Cart",
   components: {
     CartItem,
-  }
+  },
+  data () {
+    return {
+      userSearch: '',
+      showCart: false,
+      catalogUrl: '/catalogData.json',
+      cartUrl: '/getBasket.json',cartItems: [],
+      imgCart: 'https://placehold.it/50x100'
+    }
+  },
 }
 </script>
 
