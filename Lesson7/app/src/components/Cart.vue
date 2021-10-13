@@ -7,6 +7,7 @@
 
     <div class="header__cart_box" id="header__cart-box">
       <div class="header__cards" id="header__cards">
+        <CartItem></CartItem>
         <!--                                <div class="header__card">
             <a class="header__card_link">
                 <img src="img/products/product_mini_1.jpg" alt="товар" class="header__card_img">
@@ -55,8 +56,12 @@
 </template>
 
 <script>
+import CartItem from "@/components/CartItem";
 export default {
-  name: "Cart"
+  name: "Cart",
+  components: {
+    CartItem,
+  }
 }
 </script>
 
