@@ -5,7 +5,8 @@
         <div class="header__left">
           <div class="header__logo">
             <a class="header__brand" href="index.html">
-              <img src="@/assets/img/header_logo.jpg" srcset="@/assets/img/header_logo@2x.jpg 2x, @/assets/img/header_logo@3x.jpg 3x"
+              <img src="@/assets/img/header_logo.jpg"
+                   srcset="@/assets/img/header_logo@2x.jpg 2x, @/assets/img/header_logo@3x.jpg 3x"
                    class="header__img" alt="Логотип магазина">BRAN<span>D</span>
             </a>
           </div>
@@ -35,7 +36,7 @@
           <HeaderSearch></HeaderSearch>
         </div>
         <div class="header__right">
-          <cart></cart>
+          <Cart :reload="reload" :clickOnProduct="clickOnProduct" :clickedProduct="clickedProduct"></Cart>
           <a class="header__account">My Account <i class="fa fa-caret-down" aria-hidden="true"></i></a>
         </div>
       </div>
@@ -270,7 +271,9 @@
 <script>
 import Cart from "@/components/Cart";
 import HeaderSearch from "@/components/HeaderSearch";
+
 export default {
+  props: ["reload", "clickOnProduct", "clickedProduct"],
   name: "HeaderApp",
   components: {
     Cart,

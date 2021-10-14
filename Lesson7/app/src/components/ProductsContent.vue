@@ -1,15 +1,11 @@
 <template>
   <div class="products__content">
-    <ProductsItem
-        v-for="item in products"
-        :key="item.id_product"
-        :img="img"
-        :product="item">
+    <ProductsItem @add-product="addProduct"
+                  v-for=" item in products"
+                  :key="item.id_product"
+                  :img="img"
+                  :product="item">
     </ProductsItem>
-    <ul>
-      <li v-for="product in products" :key="product.id_product">{{ product.product_name }}</li>
-    </ul>
-    <p>{{ marker }}</p>
   </div>
 </template>
 
@@ -34,18 +30,10 @@ export default {
       imgCart: 'https://placehold.it/50x100',
       products: [],
       imgProduct: 'https://placehold.it/200x150',
-      marker: 0,
     }
   },
   watch: {
     reload() {
-      this.marker += 1;
-      // this.getJson(`${this.API + this.cartUrl}`)
-      //     .then(data => {
-      //       for (let item of data.contents) {
-      //         this.$data.cartItems.push(item);
-      //       }
-      //     });
       this.getJson(`${this.API + this.catalogUrl}`)
           .then(data => {
             for (let item of data) {
@@ -64,14 +52,15 @@ export default {
     }
   },
   methods: {
+    addProduct(product) {
+      this.$emit('add-item', product);
+    },
     getJson(url) {
       return fetch(url)
           .then(result => result.json())
           .catch(error => console.log(error))
-    }
-    ,
-  }
-  ,
+    },
+  },
 }
 </script>
 
