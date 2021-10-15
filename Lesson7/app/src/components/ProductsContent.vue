@@ -1,7 +1,7 @@
 <template>
   <div class="products__content">
     <ProductsItem @add-product="addProduct"
-                  v-for="item in filtered"
+                  v-for="item in this.$store.state.filtered"
                   :key="item.id_product"
                   :img="img"
                   :product="item">
@@ -37,6 +37,8 @@ export default {
       this.getJson(`${this.API + this.catalogUrl}`)
           .then(data => {
             for (let item of data) {
+              this.$store.state.products.push(item);
+              this.$store.state.filtered.push(item);
               this.$data.products.push(item);
               this.$data.filtered.push(item);
             }
