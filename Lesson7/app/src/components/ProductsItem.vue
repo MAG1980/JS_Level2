@@ -1,7 +1,7 @@
 <template>
   <div class="products__item">
     <a class="products__product" href="single_page.html">
-      <img src="@/assets/img/products/product_14.jpg" alt="товар" class="products__image">
+      <img :src="imgSrc" alt="товар" class="products__image">
       <p class="products__name">{{ product.product_name }}</p>
     </a>
     <div class="products__item-rating">
@@ -18,7 +18,7 @@
       <div class="products__add_wrapper">
         <a class="products__add_link" href="cart_page.html" @click.prevent>
           <img src="@/assets/img/products/add_to_cart.png" alt="корзина" class="products__add_icon">
-          <p class="products__add_text" @click="$emit('add-product', product)">Add to Cart</p>
+          <p class="products__add_text" @click="addToCart">Add to Cart</p>
         </a>
         <div class="products__add_links">
           <a class="products__add_small" href="cart_page.html">
@@ -38,6 +38,16 @@
 export default {
   props: ['img', 'product'],
   name: "ProductsItem",
+  data() {
+    return {
+      imgSrc: 'http://placehold.it/300x300',
+    }
+  },
+  methods: {
+    addToCart() {
+      this.$emit('add-product', this.product);
+    }
+  }
 }
 </script>
 

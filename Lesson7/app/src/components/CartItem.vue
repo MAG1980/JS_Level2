@@ -1,7 +1,7 @@
 <template>
   <div class="header__card">
     <a class="header__card_link">
-      <img src="@/assets/img/products/product_mini_2.jpg" alt="товар" class="header__card_img">
+      <img :src="img" alt="товар" class="header__card_img">
       <div class="header__card_info">
         <h3 class="header__card_title">{{ cartItem.product_name }}</h3>
         <p class="header__card_icons"><i class="fa fa-star" aria-hidden="true"></i>
@@ -23,7 +23,7 @@
 
 <script>
 export default {
-  props: ["cartItem"],
+  props: ["cartItem", "img"],
   name: "CartItem"
 }
 </script>

@@ -17,7 +17,7 @@
       </div>
       <div class="header__cart_summary">
         <p>TOTAL</p>
-        <p id="header__cart-total-price">$0</p>
+        <p id="header__cart-total-price">${{ totalPrice }}</p>
       </div>
       <a href="checkout.html" class="header__button header__button_checkout">Checkout</a>
       <a href="shopping_cart.html" class="header__button header__button_go-to-cart">Go to cart</a>
@@ -44,7 +44,15 @@ export default {
       catalogUrl: '/catalogData.json',
       cartUrl: '/getBasket.json',
       cartItems: [],
-      imgCart: 'https://placehold.it/50x100',
+      imgCart: 'http://placehold.it/100x75',
+    }
+  },
+  computed: {
+    totalPrice() {
+      return this.cartItems.reduce((sum, item) => {
+        console.log(item.price);
+        return sum += item.quantity * item.price;
+      }, 0)
     }
   },
   watch: {
