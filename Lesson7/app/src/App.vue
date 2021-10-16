@@ -1,7 +1,6 @@
 <template>
   <HeaderApp :reload="reload" :clickOnProduct="clickOnProduct" :clickedProduct="clickedProduct"></HeaderApp>
   <Products
-      :reload="reload"
       @add-product="addProduct">
   </Products>
   <Offer></Offer>
@@ -39,7 +38,10 @@ export default {
     },
   },
   mounted() {
-    this.reload = "true";
+    // this.reload = "true";
+    let url = this.$store.getters.fullCatalogUrl;
+    console.log(url);
+    this.$store.dispatch('getJson', url);
   }
 
 };
