@@ -1,8 +1,6 @@
 <template>
-  <HeaderApp :reload="reload" :clickOnProduct="clickOnProduct" :clickedProduct="clickedProduct"></HeaderApp>
-  <Products
-      @add-product="addProduct">
-  </Products>
+  <HeaderApp></HeaderApp>
+  <Products></Products>
   <Offer></Offer>
   <Subscribe></Subscribe>
   <FooterApp></FooterApp>
@@ -24,24 +22,32 @@ export default {
     Subscribe,
     FooterApp,
   },
-  data() {
-    return {
-      reload: 'false',
-      clickOnProduct: false,
-      clickedProduct: null,
-    }
-  },
   methods: {
+    getJson(url) {
+      return fetch(url)
+          .then(result => result.json())
+          .catch(error => console.log(error))
+    },
     addProduct(product) {
       this.clickedProduct = product;
       this.clickOnProduct = !this.clickOnProduct;
     },
   },
   mounted() {
-    // this.reload = "true";
-    let url = this.$store.getters.fullCatalogUrl;
-    console.log(url);
-    this.$store.dispatch('getJson', url);
+
+    this.$store.dispatch('fetchProducts');
+
+    // Получение массива товаров корзины с сервера
+    let cartURL = this.$store.getters.fullCartUrl;
+    let cartProducts = this.getJson(cartURL)
+        .then(data => {
+          let arr = [];
+          for (let item of data.contents) {
+            arr.push(item);
+          }
+          return arr
+        })
+    this.$store.dispatch('fetchCart', cartProducts);
   }
 
 };

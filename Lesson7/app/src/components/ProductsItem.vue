@@ -16,9 +16,9 @@
     </div>
     <div class="products__add">
       <div class="products__add_wrapper">
-        <a class="products__add_link" href="cart_page.html" @click.prevent>
+        <a class="products__add_link" href="cart_page.html" @click.prevent="addToCart">
           <img src="@/assets/img/products/add_to_cart.png" alt="корзина" class="products__add_icon">
-          <p class="products__add_text" @click="addToCart">Add to Cart</p>
+          <p class="products__add_text">Add to Cart</p>
         </a>
         <div class="products__add_links">
           <a class="products__add_small" href="cart_page.html">
@@ -45,7 +45,7 @@ export default {
   },
   methods: {
     addToCart() {
-      this.$emit('add-product', this.product);
+      this.$store.dispatch('clickOnAdd', this.product);
     }
   }
 }

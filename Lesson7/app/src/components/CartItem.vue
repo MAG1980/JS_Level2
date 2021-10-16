@@ -15,7 +15,7 @@
     </a>
     <button class="header__card_close"
             type="button"
-            @click="this.$emit('remove-item', cartItem)">
+            @click="this.$store.dispatch('clickOnRemove', cartItem)">
       <i class="fa fa-times-circle" aria-hidden="true"></i>
     </button>
   </div>

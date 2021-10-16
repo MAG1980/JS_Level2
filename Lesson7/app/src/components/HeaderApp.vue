@@ -36,7 +36,7 @@
           <HeaderSearch></HeaderSearch>
         </div>
         <div class="header__right">
-          <Cart :reload="reload" :clickOnProduct="clickOnProduct" :clickedProduct="clickedProduct"></Cart>
+          <Cart></Cart>
           <a class="header__account">My Account <i class="fa fa-caret-down" aria-hidden="true"></i></a>
         </div>
       </div>
@@ -273,7 +273,6 @@ import Cart from "@/components/Cart";
 import HeaderSearch from "@/components/HeaderSearch";
 
 export default {
-  props: ["reload", "clickOnProduct", "clickedProduct"],
   name: "HeaderApp",
   components: {
     Cart,
