@@ -20,5 +20,8 @@ router.post('/', (req, res) => {
 router.put('/:id', (req, res) => {
     handler(req, res, 'change', path.resolve(__dirname, 'db/userCart.json'));
 });
+router.put('/remove/:id', (req, res) => {
+    handler(req, res, 'remove', path.resolve(__dirname, 'db/userCart.json'));
+});
 
 module.exports = router;

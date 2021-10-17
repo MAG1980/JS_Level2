@@ -37,19 +37,12 @@ export default createStore({
                 }
             }
         },
-        removeProduct(state, arr) {
-            let [data, item] = arr
-            if (data.result === 1) {
-                if (item.quantity > 1) {
-                    item.quantity--;
-                } else {
-                    state.cartItems.splice(state.cartItems.indexOf(item), 1);
-                }
-                if (state.cartItems.length === 0) {
-                    document.querySelector('.header__cart').open = false
-                }
+        removeProduct(state, item) {
+            state.cartItems.splice(state.cartItems.indexOf(item), 1);
+            if (state.cartItems.length === 0) {
+                document.querySelector('.header__cart').open = false
             }
-        },
+        }
     },
     actions: {
         getJson(context, url) {
@@ -135,9 +128,10 @@ export default createStore({
             }
         },
         clickOnRemove(context, item) {
-            this.dispatch('getJson', `${this.state.API}/addToBasket.json`)
+            let find = this.state.cartItems.find(el => el.id_product === item.id_product);
+            this.dispatch('putJson', [`/api/cart/remove/${find.id_product}`, item])
                 .then(data => {
-                    context.commit('removeProduct', [data, item])
+                    context.commit('removeProduct', item)
                 })
         }
         ,
