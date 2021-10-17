@@ -25,21 +25,8 @@ export default {
   mounted() {
     this.$store.dispatch('fetchProducts', `/api/products`);
     this.$store.dispatch('fetchCart', '/api/cart');
-
-    // Получение массива товаров корзины с сервера
-    let cartURL = this.$store.getters.fullCartUrl;
-    let cartProducts = this.getJson(cartURL)
-        .then(data => {
-          let arr = [];
-          for (let item of data.contents) {
-            arr.push(item);
-          }
-          return arr
-        })
-    this.$store.dispatch('fetchCart', cartProducts);
   }
-
-};
+}
 </script>
 
 <style lang="scss">

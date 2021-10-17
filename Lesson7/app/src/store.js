@@ -60,12 +60,6 @@ export default createStore({
                     this.$refs.error.text = error;
                 })
         },
-        // getJson(context, url) {
-        //     return fetch(url)
-        //         .then(result => result.json())
-        //         .catch(error => console.log(error))
-        // }
-
         postJson(context, arr) {
             let [url, data] = arr
             return fetch(url, {
@@ -82,7 +76,10 @@ export default createStore({
                 })
         },
         putJson(context, arr) {
+            console.log(arr)
             let [url, data] = arr
+            console.log(url)
+            console.log(data)
             return fetch(url, {
                 method: 'PUT',
                 headers: {
@@ -118,13 +115,25 @@ export default createStore({
                 }).then(arr => context.commit('loadCart', arr))
         },
         clickOnAdd(context, item) {
-            // context.commit('showCart')
-            this.dispatch('getJson', `${this.state.API}/addToBasket.json`)
-                .then(data => {
-                    context.commit('addProduct', [data, item])
-                })
-        }
-        ,
+            console.log(item)
+            let find = this.state.cartItems.find(el => el.id_product === item.id_product);
+            if (find) {
+                this.dispatch('putJson', [`/api/cart/${find.id_product}`, {quantity: 1}])
+                    .then(data => {
+                        if (data.result === 1) {
+                            find.quantity++
+                        }
+                    })
+            } else {
+                const prod = Object.assign({quantity: 1}, item);
+                this.dispatch('postJson', [`/api/cart`, prod])
+                    .then(data => {
+                        if (data.result === 1) {
+                            this.state.cartItems.push(prod)
+                        }
+                    })
+            }
+        },
         clickOnRemove(context, item) {
             this.dispatch('getJson', `${this.state.API}/addToBasket.json`)
                 .then(data => {
