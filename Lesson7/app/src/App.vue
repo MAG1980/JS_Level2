@@ -22,20 +22,9 @@ export default {
     Subscribe,
     FooterApp,
   },
-  methods: {
-    getJson(url) {
-      return fetch(url)
-          .then(result => result.json())
-          .catch(error => console.log(error))
-    },
-    addProduct(product) {
-      this.clickedProduct = product;
-      this.clickOnProduct = !this.clickOnProduct;
-    },
-  },
   mounted() {
-
-    this.$store.dispatch('fetchProducts');
+    this.$store.dispatch('fetchProducts', `/api/products`);
+    this.$store.dispatch('fetchCart', '/api/cart');
 
     // Получение массива товаров корзины с сервера
     let cartURL = this.$store.getters.fullCartUrl;
