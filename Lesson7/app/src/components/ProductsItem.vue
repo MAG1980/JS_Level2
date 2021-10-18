@@ -40,7 +40,8 @@ export default {
   name: "ProductsItem",
   data() {
     return {
-      imgSrc: 'http://placehold.it/300x300',
+      // imgSrc: 'http://placehold.it/300x300',
+      imgSrc: `./img/products/product_${this.product.id_product}.jpg`,
     }
   },
   methods: {
