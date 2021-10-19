@@ -10,7 +10,7 @@
         <CartItem
             v-for="item in this.$store.getters.productsCart"
             :key="item.id_product"
-            :img="imgCart"
+            :img="item.img_product"
             :cartItem="item"
         ></CartItem>
       </div>
