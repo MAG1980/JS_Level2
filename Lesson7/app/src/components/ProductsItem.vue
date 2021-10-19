@@ -46,7 +46,7 @@ export default {
   },
   methods: {
     addToCart() {
-      this.$store.dispatch('clickOnAdd', this.product);
+      this.$store.dispatch('clickOnAdd', Object.assign({img_product: this.imgSrc}, this.product));
     }
   }
 }

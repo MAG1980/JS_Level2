@@ -1,22 +1,47 @@
 [
   {
     "id_product": 124,
-    "product_name": "Keyboard",
+    "product_name": "Футболка",
     "price": 1600
   },
   {
     "id_product": 457,
-    "product_name": "Gamepad",
-    "price": 3000
+    "product_name": "Красная блузка",
+    "price": 2000
   },
   {
     "id_product": 123,
-    "product_name": "Ноутбук",
-    "price": 45600
+    "product_name": "Куртка",
+    "price": 5600
   },
   {
     "id_product": 456,
-    "product_name": "Мышка",
-    "price": 1000
+    "product_name": "Блузка с цветами",
+    "price": 2300
+  },
+  {
+    "id_product": 567,
+    "product_name": "Жакет в полоску",
+    "price": 3200
+  },
+  {
+    "id_product": 678,
+    "product_name": "Серый пиджак",
+    "price": 3800
+  },
+  {
+    "id_product": 789,
+    "product_name": "Бежевые бриджи",
+    "price": 1200
+  },
+  {
+    "id_product": 890,
+    "product_name": "Белые шорты",
+    "price": 600
+  },
+  {
+    "id_product": 901,
+    "product_name": "Куртка-безрукавка",
+    "price": 5200
   }
 ]
