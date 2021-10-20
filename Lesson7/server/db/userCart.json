@@ -1,13 +1,5 @@
 {
     "amount": 46600,
     "countGoods": 2,
-    "contents": [
-        {
-            "quantity": 1,
-            "img_product": "./img/products/product_457.jpg",
-            "id_product": 457,
-            "product_name": "Красная блузка",
-            "price": 2000
-        }
-    ]
+    "contents": []
 }

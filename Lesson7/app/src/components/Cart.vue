@@ -15,7 +15,8 @@
         ></CartItem>
       </div>
       <div class="header__cart_summary">
-        <p>TOTAL</p>
+        <p v-if=this.$store.getters.isEmptyCart>Корзина пуста</p>
+        <p v-else>TOTAL</p>
         <p id="header__cart-total-price">${{ totalPrice }}</p>
       </div>
       <a href="checkout.html" class="header__button header__button_checkout">Checkout</a>
